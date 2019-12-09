@@ -156,7 +156,7 @@ def generate_data():
     center_y = 0
     radius = 100
 
-    for i in range(100):
+    for i in range(1000):
         # random angle
         alpha = 2 * math.pi * random.random()
         x = radius * math.cos(alpha) + center_x
@@ -188,15 +188,13 @@ def display(points_list, lines_list):
 
 def main():
     list_a, list_b, list_c, list_d = generate_data()
-    display(list_d, [])
     plot = Plot([])
-    # display_splitted_list(list_a, -1000, 1000, plot, False)
-    # display_splitted_list(list_b, -10 ** 14, 10 ** 14, plot, False)
-    # display_splitted_list(list_c, -100, 100, plot, False)
+
     display_splitted_list(list_d, -1000, 1000, plot, 1)
     display_splitted_list(list_d, -1000, 1000, plot, 2)
     display_splitted_list(list_d, -1000, 1000, plot, 3)
     display_splitted_list(list_d, -1000, 1000, plot, 4)
+
     plot.draw()
 
 
